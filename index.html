@@ -1,21 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Intel: Sustainability Through the Ages</title>
   <link rel="stylesheet" href="style.css" />
+  <!-- Bootstrap RTL CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet" integrity="sha384-+qdLa3eX1rZb1rQ6hZ6Q5Q5e0siJ5u1T9ro3AtxEvsC0FqEJgqS0bM6D2ryrF8a5" crossorigin="anonymous">
+  <!-- Bootstrap Icons CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
 <body>
 
   <!-- Header / Hero Section -->
   <header>
     <div>
-      <img src="img/intel-header-logo.svg" alt="Intel Logo" />
+      <!-- Ask Copilot to teach you about `.svg` 🙂 -->
+      <img src="img/intel-header-logo.svg" alt="Intel Corporation logo" />
       <!-- Main Heading -->
       <h1>
         Sustainability Through the Ages
       </h1>
+
 
       <!-- Subheading / Description -->
       <p>
@@ -28,11 +34,13 @@
 
   <!-- Timeline Cards Section -->
   <section>
+
     <!-- Card 1: 1968 -->
-    <div>
+    <!-- This image represents the founding of Intel. -->
+    <div class="timeline-card">
       <h2>1968</h2>
       <h3>Intel Founded</h3>
-      <img src="img/1.jpg" alt="Placeholder Image" />
+      <img src="img/1.jpg" alt="Founders Robert Noyce and Gordon Moore at Intel's founding in 1968" />
       <p>
         Robert Noyce and Gordon Moore rename the newly formed company 
         NM Electronics to Intel Corporation, laying the foundation for 
@@ -41,10 +49,11 @@
     </div>
 
     <!-- Card 2: 1971 -->
-    <div>
+    <!-- This image represents the first microprocessor. -->
+    <div class="timeline-card">
       <h2>1971</h2>
       <h3>First Microprocessor</h3>
-      <img src="img/2.jpg" alt="Placeholder Image" />
+      <img src="img/2.jpg" alt="Intel 4004, the world's first commercial microprocessor, 1971" />
       <p>
         Intel debuts the 4004, the world's first commercial microprocessor, 
         igniting the microprocessor revolution and propelling the future 
@@ -53,10 +62,11 @@
     </div>
 
     <!-- Card 3: 1978 -->
-    <div>
+    <!-- This image represents the 8086 processor. -->
+    <div class="timeline-card">
       <h2>1978</h2>
       <h3>8086 Processor</h3>
-      <img src="img/3.jpg" alt="Placeholder Image" />
+      <img src="img/3.jpg" alt="Intel 8086 processor, establishing x86 architecture, 1978" />
       <p>
         Launch of the 8086 processor, establishing the x86 architecture 
         that drives countless PCs and servers in the modern era.
@@ -64,10 +74,11 @@
     </div>
 
     <!-- Card 4: 1985 -->
-    <div>
+    <!-- This image represents the 386 processor. -->
+    <div class="timeline-card">
       <h2>1985</h2>
       <h3>386 Processor</h3>
-      <img src="img/4.jpg" alt="Placeholder Image" />
+      <img src="img/4.jpg" alt="Intel 386 processor, 32-bit architecture, 1985" />
       <p>
         Intel introduces the 386 processor with 32-bit architecture, 
         ushering in a new era of performance and multitasking for 
@@ -76,10 +87,11 @@
     </div>
 
     <!-- Card 5: 2006 -->
-    <div>
+    <!-- This image represents greenhouse gas emissions. -->
+    <div class="timeline-card">
       <h2>2006</h2>
       <h3>Peak GHG Emissions</h3>
-      <img src="https://placehold.co/250x100" alt="Placeholder Image" />
+      <img src="img/ghg-emissions.jpg" alt="Intel's greenhouse gas emissions peak in 2006" />
       <p>
         This year marks Intel's highest annual greenhouse gas emissions 
         for operations. Over subsequent years, Intel invests heavily in 
@@ -89,10 +101,11 @@
     </div>
 
     <!-- Card 6: 2020 -->
-    <div>
+    <!-- This image represents the RISE strategy. -->
+    <div class="timeline-card">
       <h2>2020</h2>
       <h3>RISE Strategy</h3>
-      <img src="https://placehold.co/250x100" alt="Placeholder Image" />
+      <img src="img/rise-strategy.jpg" alt="Intel RISE strategy and 2030 sustainability goals, 2020" />
       <p>
         Intel launches its RISE (Responsible, Inclusive, Sustainable, 
         Enabling) strategy and 2030 goals, aiming to drive industry-wide 
@@ -101,10 +114,11 @@
     </div>
 
     <!-- Card 7: 2022 -->
-    <div>
+    <!-- This image represents the Net-Zero by 2040 goal. -->
+    <div class="timeline-card">
       <h2>2022</h2>
       <h3>Net-Zero By 2040</h3>
-      <img src="https://placehold.co/250x100" alt="Placeholder Image" />
+      <img src="img/netzero-2040.jpg" alt="Intel's Net-Zero by 2040 commitment, 2022" />
       <p>
         Intel announces its commitment to achieve net-zero greenhouse 
         gas emissions (Scope 1 and 2) across its global operations 
@@ -113,10 +127,11 @@
     </div>
 
     <!-- Card 8: 2023 -->
-    <div>
+    <!-- This image represents renewable electricity. -->
+    <div class="timeline-card">
       <h2>2023</h2>
       <h3>Renewable Electricity</h3>
-      <img src="https://placehold.co/250x100" alt="Placeholder Image" />
+      <img src="img/renewable-electricity.jpg" alt="Intel achieves 99% renewable electricity usage worldwide, 2023" />
       <p>
         The company achieves 99% renewable electricity usage worldwide, 
         helping to drastically lower carbon emissions and driving progress 
@@ -125,10 +140,11 @@
     </div>
 
     <!-- Card 9: 2024 -->
-    <div>
+    <!-- This image represents the Sustainability Summit. -->
+    <div class="timeline-card">
       <h2>2024</h2>
       <h3>Sustainability Summit</h3>
-      <img src="https://placehold.co/250x100" alt="Placeholder Image" />
+      <img src="img/sustainability-summit.jpg" alt="Intel Sustainability Summit, 2024, uniting suppliers and industry leaders" />
       <p>
         Intel hosts its first Sustainability Summit, uniting suppliers, 
         government officials, and industry leaders to collaborate on 
@@ -136,56 +152,81 @@
       </p>
     </div>
   </section>
+  <p>Scroll to view timeline | Hover over cards to learn more!</p>
 
-  <!-- 3-Column Content Section -->
-  <section>
-    <div>
-      
-      <!-- Column 1 -->
-      <div>
-        <h2>RISE Strategy</h2>
-        <p>
-          Under its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy, 
-          Intel sets ambitious 2030 goals, including driving industry-wide 
-          progress on climate action, water stewardship, and waste reduction.
-        </p>
-        <!-- Learn More Button -->
-        <a href="#">Learn More</a>
+  <section class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-4 mb-4 d-flex align-items-stretch flex-column text-center">
+        <div class="info-card h-100 d-flex flex-column p-4">
+          <h4><i class="bi bi-globe2 text-primary me-2" style="font-size:2rem;"></i>Global Impact</h4>
+          <p class="flex-grow-1">Intel's sustainability initiatives reach across the globe, driving positive change in every region where we operate.</p>
+          <a href="#" class="btn btn-outline-primary btn-lg fw-bold shadow rounded-pill mt-3" data-bs-toggle="modal" data-bs-target="#learnMoreModal">Learn More</a>
+        </div>
       </div>
-
-      <!-- Column 2 -->
-      <div>
-        <h2>Commitment</h2>
-        <p>
-          In 2022, Intel pledged to achieve net-zero greenhouse gas emissions 
-          (Scope 1 and 2) by 2040. This commitment builds on decades of 
-          environmental initiatives and partnerships across the semiconductor 
-          industry.
-        </p>
-        <!-- Learn More Button -->
-        <a href="#">Learn More</a>
+      <div class="col-12 col-md-4 mb-4 d-flex align-items-stretch flex-column text-center">
+        <div class="info-card h-100 d-flex flex-column p-4">
+          <h4><i class="bi bi-lightning-charge-fill text-success me-2" style="font-size:2rem;"></i>Clean Energy</h4>
+          <p class="flex-grow-1">We invest in renewable energy and innovative technologies to reduce our carbon footprint and promote clean manufacturing.</p>
+          <a href="#" class="btn btn-outline-success btn-lg fw-bold shadow rounded-pill mt-3">Learn More</a>
+        </div>
       </div>
-
-      <!-- Column 3 -->
-      <div>
-        <h2>Water &amp; Waste</h2>
-        <p>
-          Intel conserves billions of gallons of water annually and 
-          collaborates with local communities to restore watersheds.
-          Intel also upcycles and recycles materials to reduce waste and 
-          advance a circular economy.
-        </p>
-        <!-- Learn More Button -->
-        <a href="#">Learn More</a>
+      <div class="col-12 col-md-4 mb-4 d-flex align-items-stretch flex-column text-center">
+        <div class="info-card h-100 d-flex flex-column p-4">
+          <h4><i class="bi bi-people-fill text-info me-2" style="font-size:2rem;"></i>Collaboration</h4>
+          <p class="flex-grow-1">Partnering with industry leaders and communities, Intel fosters collaboration for a more sustainable future.</p>
+          <a href="#" class="btn btn-outline-info btn-lg fw-bold shadow rounded-pill mt-3">Learn More</a>
+        </div>
       </div>
-
     </div>
   </section>
 
-  <!-- Subscription Form -->
-  <section>
-    <h2>Subscribe to our Newsletter</h2>
-    <!-- Add form here -->
-  </section>
+  <!-- Newsletter Subscription Bar -->
+  <div class="newsletter-bar">
+    <form class="newsletter-bar-form" role="form" aria-label="Subscribe to Sustainability Newsletter">
+      <label for="newsletterEmail" class="visually-hidden">Email address</label>
+      <input type="email" class="form-control" id="newsletterEmail" name="newsletterEmail" placeholder="Your email" required aria-required="true" autocomplete="email">
+      <button type="submit" class="btn btn-primary fw-bold rounded-pill">
+        Subscribe
+      </button>
+    </form>
+  </div>
+
+  <footer class="bg-dark border-top py-4 text-white" style="margin-bottom:0; position:relative; width:100vw; left:50%; right:50%; margin-left:-50vw; margin-right:-50vw;">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+          <small>&copy; 2024 Intel Corporation. All rights reserved.</small>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <a href="#" class="text-decoration-none me-3 text-white">Privacy Policy</a>
+          <a href="#" class="text-decoration-none me-3 text-white">Terms of Use</a>
+          <a href="#" class="text-decoration-none text-white">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script>
+  // List of RTL language codes
+  const rtlLangs = ['ar', 'he', 'fa', 'ur'];
+
+  function updateDirByLang() {
+    const html = document.documentElement;
+    const lang = html.getAttribute('lang') || '';
+    if (rtlLangs.some(code => lang.startsWith(code))) {
+      html.setAttribute('dir', 'rtl');
+    } else {
+      html.setAttribute('dir', 'ltr');
+    }
+  }
+
+  // Observe changes to the lang attribute
+  const observer = new MutationObserver(updateDirByLang);
+  observer.observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+
+  // Initial check
+  updateDirByLang();
+  </script>
 </body>
 </html>

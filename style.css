@@ -1,0 +1,1018 @@
+/* Add your CSS here */
+
+/* Intel-branded background: use a light blue for a clean, modern look */
+body {
+  background-color: #f0f4f8; /* Light blue background for Intel branding */
+  font-family: Rubik, sans-serif; /* Simple, easy-to-read font */
+  margin: 0;
+  padding: 0 0 80px 0; /* Add bottom padding for newsletter bar */
+  color: #1a1a1a; /* Darker default text for better contrast */
+}
+
+/* Center the header and add space around it */
+header {
+  text-align: center; /* Center all header content */
+  padding: 40px 10px 20px 20px; /* More space above and below */
+  /* Light blue gradient background for the header */
+  background: linear-gradient(135deg, #2191e8 0%, #073e6a 100%);
+  border-bottom: 2px solid #2c5474; /* Thin Intel blue line for branding */
+  }
+
+/* Style the Intel logo */
+header img {
+  width: 120px; /* Set logo width */
+  max-width: 90vw; /* Make sure it fits on small screens */
+  margin-bottom: 16px; /* Space below logo */
+  display: block; /* Center the logo */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Main headline style */
+header h1 {
+  font-size: 2.5em; /* Large, bold headline */
+  margin: 35px 0 8px 0;
+  color: #ffffff; /* Intel blue for strong branding */
+  font-weight: bold;
+  letter-spacing: 1px; /* Slight spacing for clarity */
+  text-shadow: 0 2px 8px #191d20; /* Soft shadow for contrast */
+  display: inline;
+}
+
+/* Subheading/description style */
+header p {
+  color: #e6e6e6; /* Lighter text for better contrast on dark background */
+  font-size: 1.15em;
+  margin: 60px auto 20px auto; /* Add padding above and below the paragraph */
+  max-width: 500px; /* Keep subheading readable */
+  line-height: 1.5;
+  font-family: 'Merriweather', serif; /* Use a serif font for a classic look */
+ }
+
+/* Timeline layout: use Flexbox for easy alignment and responsiveness */
+section {
+  display: flex; /* Use Flexbox to lay out the timeline cards */
+  flex-direction: column; /* Stack cards vertically on small screens */
+  gap: 5px; /* Space between cards */
+  width: 100vw; /* Allow full width */
+  margin: 0 auto;
+  padding: 10px 10px;
+  overflow-x: visible; /* No horizontal scroll on small screens */
+}
+
+/* Style each timeline card for Intel's aesthetic */
+.timeline-card {
+  font-family: 'Rubik', Arial, sans-serif; /* Consistent, modern font */
+  background: #fff; /* White background for clean look */
+  border: 1px solid #e0e0e0; /* Light border for subtle separation */
+  box-shadow: 0 2px 12px rgba(0,113,197,0.08); /* Soft Intel blue shadow */
+  margin: 0 auto 20px auto; /* Center cards and add even space below */
+  padding: 20px 18px; /* Even padding for content */
+  transition: box-shadow 0.2s, background 0.2s, transform 0.2s; /* Smooth transitions */
+  flex: 0 0 260px; /* Do not grow or shrink, set base width */
+  min-width: 260px; /* Minimum width for horizontal scroll */
+  width: 350px; /* Prevent cards from getting too wide */
+  color: #1a1a1a; /* Darker text for better contrast */
+  position: relative;
+}
+
+.timeline-card h2 {
+  color: #0071c5; /* Intel blue for year */
+  font-size: 1.3em;
+  margin: 0 0 5px 0;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.timeline-card h3 {
+  /* Make the subheading bold and use an innovative font */
+  font-family: 'Orbitron', Arial, sans-serif; /* Orbitron is a modern, tech-inspired font */
+  font-weight: bold; /* Make the text bold */
+  color: #222; /* Darker heading for contrast */
+  font-size: 1.1em;
+  margin: 20px 0 12px 0;
+}
+
+.timeline-card img {
+  /* Make all timeline card images the same size */
+  width: 230px; /* Set a fixed width */
+  height: 140px; /* Set a fixed height */
+  object-fit: cover; /* Crop images to fill the box, keeping them uniform */
+  display: block;
+  margin: 12px auto 14px auto;
+  box-shadow: 0 1px 6px rgba(0,113,197,0.07); /* Subtle blue shadow */
+  position: relative;
+  z-index: 1;
+}
+
+.timeline-card p {
+  /* Show the paragraph on top of the image when hovering over the card */
+
+  color: #f5f5f5; /* Lighter text for overlay */
+  background: rgba(13, 90, 148, 0.92); /* Slightly darker overlay for better contrast */
+  font-size: 1.25em;
+  margin: 0;
+  line-height: 1.5;
+  display: none; /* Hide by default, shown on hover */
+  position: absolute; /* Position on top of the card */
+  top: 0; /* Start at the top of the card */
+  left: 0; /* Start at the left edge */
+  right: 0; /* Stretch to the right edge */
+  bottom: 0; /* Stretch to the bottom edge */
+  width: 100%; /* Take up full width */
+  height: 100%; /* Take up full height */
+  padding: 20px 10px;
+  font-family: 'Kantumruy Pro', serif;
+  /* Use a light blue color with transparency so the image shows through */
+  box-sizing: border-box;
+  z-index: 2; /* Make sure it appears above the image */
+  text-align: left; /* Align text to the left for readability */
+}
+
+/* Show the paragraph when hovering over the card */
+.timeline-card:hover p {
+  display: block;
+}
+
+/* Add a simple hover effect to cards */
+section div:hover, .timeline-card:hover {
+  /* Use the same light blue color as the paragraph, with transparency */
+  box-shadow: 0 8px 24px rgba(0,113,197,0.18); /* Bigger shadow on hover */
+  transform: scale(1.04); /* Slightly grow the card */
+  transition: box-shadow 0.2s, background 0.2s, transform 0.2s; /* Smooth transition */
+}
+
+/* Style the images inside cards */
+section img {
+  width: 100%;
+  display: block;
+  margin: 10px auto;
+}
+
+/* Make headings stand out */
+section h2 {
+  color: #0071c5;
+  margin: 0 0 5px 0;
+  font-size: 1.3em;
+}
+
+section h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.1em;
+  color: #222;
+}
+
+section p {
+  color: #222; /* Darker text for better contrast */
+  font-size: 1em;
+}
+
+/* Responsive: stack cards and make them fit small screens */
+@media (max-width: 600px) {
+  body {
+    padding: 0 0 60px 0;
+  }
+  header {
+    padding: 24px 4px 12px 4px;
+  }
+  header img {
+    width: 100px;
+  }
+  header h1 {
+    font-size: 1.5em;
+    margin: 20px 0 6px 0;
+  }
+  section {
+    padding: 10px 2px;
+  }
+  section div {
+    padding: 10px;
+  }
+  .timeline-card {
+    width: 95vw;
+    min-width: 180px;
+    padding: 10px 6px;
+  }
+  .container.my-5,
+  .container.my-5.three-col-section {
+    padding: 0.5rem 0.1rem;
+    border-radius: 0.5rem;
+  }
+  .container.my-5 > .row.justify-content-center,
+  .container.my-5.three-col-section > .row.justify-content-center {
+    gap: 0.5rem;
+  }
+  .col-12.col-md-4.mb-4.d-flex.align-items-stretch.flex-column.text-center {
+    width: 100px;
+    max-width: 120px;
+    min-width: 80px;
+    padding: 0;
+  }
+  .info-card {
+    min-width: 80px;
+    max-width: 120px;
+    padding: 0 0.1rem;
+  }
+  .info-card h4 {
+    font-size: 1rem;
+    margin-bottom: 0.7rem;
+  }
+  .info-card p {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+  .info-card .btn {
+    min-width: 90px;
+    font-size: 0.95rem;
+    padding: 0.5rem 1rem;
+  }
+  .newsletter-bar {
+    padding: 0.5rem;
+  }
+  .newsletter-bar-form {
+    flex-direction: column;
+    gap: 0.5rem;
+    max-width: 100vw;
+  }
+  .newsletter-bar-form button {
+    width: 100%;
+    padding: 0.75rem 0;
+  }
+}
+
+/* Responsive: on screens wider than 700px, arrange cards in a row */
+@media (min-width: 700px) {
+  /* On larger screens, show cards in a row with spacing */
+  section {
+    flex-direction: row; /* Arrange cards in a row on big screens */
+    flex-wrap: nowrap;
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 5px;
+    padding-top: 15px; /* Add space above the cards */
+    padding-bottom: 20px;
+    width: 100%; /* Full width for the section */
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+  }
+  .timeline-card {
+    margin: 0 16px;
+    scroll-snap-align: initial;
+  }
+  .timeline-card:first-child {
+    margin-left: 32px;
+  }
+  .timeline-card:last-child {
+    margin-right: 32px;
+  }
+}
+
+@media (min-width: 1200px) {
+  header {
+    padding: 60px 0 30px 0;
+  }
+  header h1 {
+    font-size: 3em;
+    margin: 50px 0 12px 0;
+  }
+  .timeline-card {
+    width: 400px;
+    min-width: 320px;
+    padding: 32px 24px;
+  }
+  .container.my-5.three-col-section {
+    padding: 4rem 0 3.5rem 0;
+    border-radius: 2rem;
+  }
+  .container.my-5.three-col-section > .row.justify-content-center {
+    gap: 6rem;
+  }
+  .info-card {
+    min-width: 300px;
+    max-width: 400px;
+    padding: 0 2rem;
+  }
+  .info-card h4 {
+    font-size: 1.7rem;
+    margin-bottom: 1.5rem;
+  }
+  .info-card p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  .info-card .btn {
+    min-width: 180px;
+    font-size: 1.15rem;
+    padding: 1rem 2.5rem;
+  }
+}
+
+/* Make the three-column info cards display inline horizontally */
+.container.my-5 > .row.justify-content-center {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 2.5rem;
+}
+.col-12.col-md-4.mb-4.d-flex.align-items-stretch.flex-column.text-center {
+  flex: 0 0 auto;
+  width: 360px;
+  max-width: 360px;
+  min-width: 220px;
+  padding: 0;
+}
+.info-card {
+  background: #fff;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 8px rgba(33,145,232,0.06);
+  border: 1px solid #e3eaf3;
+  padding: 1rem 0.75rem;
+  margin-bottom: 1.25rem;
+  transition: box-shadow 0.18s, transform 0.18s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 200px;
+  max-width: 260px;
+  width: 100%;
+}
+.info-card:hover {
+  box-shadow: 0 4px 16px rgba(33,145,232,0.13);
+  transform: translateY(-2px) scale(1.01);
+}
+.info-card h4 {
+  font-size: 1.15rem;
+  margin-bottom: 0.75rem;
+  color: #0a3a5e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.info-card p {
+  color: #3a3a3a;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.info-card .btn {
+  min-width: 120px;
+  font-size: 1rem;
+  border-radius: 2rem;
+}
+
+/* Subscription card highlight */
+.info-card.p-4 {
+  background: #eaf6ff;
+  border: 1.5px solid #b6dafe;
+}
+
+.container.my-5 {
+  background: #f7fbfd;
+  border-radius: 1rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+/* Newsletter Subscription Section Modern Style */
+.newsletter-section {
+  background: #eaf6ff;
+  border-radius: 1.25rem;
+  box-shadow: 0 2px 8px rgba(33,145,232,0.08);
+  padding: 2.5rem 2rem 2rem 2rem;
+  margin-bottom: 2.5rem;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.newsletter-section h4 {
+  color: #073e6a;
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+.newsletter-section form {
+  width: 100%;
+}
+.newsletter-section .form-label {
+  color: #0a3a5e;
+  font-weight: 500;
+}
+.newsletter-section .form-control {
+  border-radius: 2rem;
+  border: 1.5px solid #b6dafe;
+  padding: 0.75rem 1.25rem;
+  font-size: 1.1rem;
+}
+.newsletter-section .btn {
+  border-radius: 2rem;
+  font-size: 1.1rem;
+  padding: 0.75rem 0;
+  font-weight: 600;
+  background: linear-gradient(90deg, #2191e8 0%, #073e6a 100%);
+  border: none;
+}
+.newsletter-section .btn:hover {
+  background: linear-gradient(90deg, #073e6a 0%, #2191e8 100%);
+}
+
+/* Fixed newsletter bar at the bottom */
+.newsletter-bar {
+  position: static;
+  width: 100vw;
+  background: linear-gradient(90deg, #eaf6ff 0%, #f7fbfd 100%);
+  box-shadow: 0 -2px 16px rgba(33,145,232,0.10);
+  padding: 1rem 2rem;
+  z-index: 1050;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.newsletter-bar-form {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  width: 100%;
+  max-width: 600px;
+  align-items: center;
+}
+.newsletter-bar-form input[type="email"] {
+  flex: 1 1 auto;
+  border-radius: 2rem;
+  border: 1.5px solid #b6dafe;
+  padding: 0.75rem 1.25rem;
+  font-size: 1.1rem;
+  background: #fff;
+  box-shadow: none;
+}
+.newsletter-bar-form button {
+  border-radius: 2rem;
+  font-size: 1.1rem;
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  background: linear-gradient(90deg, #2191e8 0%, #073e6a 100%);
+  border: none;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(33,145,232,0.08);
+  transition: background 0.2s;
+}
+.newsletter-bar-form button:hover {
+  background: linear-gradient(90deg, #073e6a 0%, #2191e8 100%);
+}
+@media (max-width: 900px) {
+  .container.my-5 > .row.justify-content-center { gap: 1.5rem; }
+  .col-12.col-md-4.mb-4.d-flex.align-items-stretch.flex-column.text-center {
+    width: 200px; max-width: 200px; min-width: 160px;
+  }
+  .info-card { min-width: 160px; max-width: 200px; }
+}
+@media (max-width: 600px) {
+  .container.my-5 > .row.justify-content-center { gap: 1rem; }
+  .col-12.col-md-4.mb-4.d-flex.align-items-stretch.flex-column.text-center {
+    width: 140px; max-width: 140px; min-width: 120px;
+  }
+  .info-card { min-width: 120px; max-width: 140px; }
+  .newsletter-bar { padding: 0.5rem; }
+  .newsletter-bar-form {
+    flex-direction: column;
+    gap: 0.5rem;
+    max-width: 100vw;
+  }
+  .newsletter-bar-form button {
+    width: 100%;
+    padding: 0.75rem 0;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 0 0 60px 0;
+  }
+  header {
+    padding: 24px 4px 12px 4px;
+  }
+  header img {
+    width: 100px;
+  }
+  header h1 {
+    font-size: 1.5em;
+    margin: 20px 0 6px 0;
+  }
+  section {
+    padding: 10px 2px;
+  }
+  section div {
+    padding: 10px;
+  }
+  .timeline-card {
+    width: 95vw;
+    min-width: 180px;
+    padding: 10px 6px;
+  }
+  .container.my-5,
+  .container.my-5.three-col-section {
+    padding: 0.5rem 0.1rem;
+    border-radius: 0.5rem;
+  }
+  .container.my-5 > .row.justify-content-center,
+  .container.my-5.three-col-section > .row.justify-content-center {
+    gap: 0.5rem;
+  }
+  .col-12.col-md-4.mb-4.d-flex.align-items-stretch.flex-column.text-center {
+    width: 100px;
+    max-width: 120px;
+    min-width: 80px;
+    padding: 0;
+  }
+  .info-card {
+    min-width: 80px;
+    max-width: 120px;
+    padding: 0 0.1rem;
+  }
+  .info-card h4 {
+    font-size: 1rem;
+    margin-bottom: 0.7rem;
+  }
+  .info-card p {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+  .info-card .btn {
+    min-width: 90px;
+    font-size: 0.95rem;
+    padding: 0.5rem 1rem;
+  }
+  .newsletter-bar {
+    padding: 0.5rem;
+  }
+  .newsletter-bar-form {
+    flex-direction: column;
+    gap: 0.5rem;
+    max-width: 100vw;
+  }
+  .newsletter-bar-form button {
+    width: 100%;
+    padding: 0.75rem 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  header {
+    padding: 60px 0 30px 0;
+  }
+  header h1 {
+    font-size: 3em;
+    margin: 50px 0 12px 0;
+  }
+  .timeline-card {
+    width: 400px;
+    min-width: 320px;
+    padding: 32px 24px;
+  }
+  .container.my-5.three-col-section {
+    padding: 4rem 0 3.5rem 0;
+    border-radius: 2rem;
+  }
+  .container.my-5.three-col-section > .row.justify-content-center {
+    gap: 6rem;
+  }
+  .info-card {
+    min-width: 300px;
+    max-width: 400px;
+    padding: 0 2rem;
+  }
+  .info-card h4 {
+    font-size: 1.7rem;
+    margin-bottom: 1.5rem;
+  }
+  .info-card p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  .info-card .btn {
+    min-width: 180px;
+    font-size: 1.15rem;
+    padding: 1rem 2.5rem;
+  }
+}
+
+/* Make the three-column info cards display inline horizontally */
+.container.my-5 > .row.justify-content-center {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 6rem;
+  justify-content: center;
+  align-items: stretch;
+  width: 100vw;
+  max-width: 100vw;
+  margin: 0;
+}
+
+.col-12.col-md-4.mb-4.d-flex.align-items-stretch.flex-column.text-center {
+  flex: 0 0 auto;
+  width: 360px;
+  max-width: 360px;
+  min-width: 220px;
+  padding: 0;
+}
+.info-card {
+  background: #fff;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 8px rgba(33,145,232,0.06);
+  border: 1px solid #e3eaf3;
+  padding: 1rem 0.75rem;
+  margin-bottom: 1.25rem;
+  transition: box-shadow 0.18s, transform 0.18s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 200px;
+  max-width: 260px;
+  width: 100%;
+}
+.info-card:hover {
+  box-shadow: 0 4px 16px rgba(33,145,232,0.13);
+  transform: translateY(-2px) scale(1.01);
+}
+.info-card h4 {
+  font-size: 1.15rem;
+  margin-bottom: 0.75rem;
+  color: #0a3a5e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.info-card p {
+  color: #3a3a3a;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.info-card .btn {
+  min-width: 120px;
+  font-size: 1rem;
+  border-radius: 2rem;
+}
+
+/* Subscription card highlight */
+.info-card.p-4 {
+  background: #eaf6ff;
+  border: 1.5px solid #b6dafe;
+}
+
+.container.my-5 {
+  background: #f7fbfd;
+  border-radius: 1rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+/* Newsletter Subscription Section Modern Style */
+.newsletter-section {
+  background: #eaf6ff;
+  border-radius: 1.25rem;
+  box-shadow: 0 2px 8px rgba(33,145,232,0.08);
+  padding: 2.5rem 2rem 2rem 2rem;
+  margin-bottom: 2.5rem;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.newsletter-section h4 {
+  color: #073e6a;
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+.newsletter-section form {
+  width: 100%;
+}
+.newsletter-section .form-label {
+  color: #0a3a5e;
+  font-weight: 500;
+}
+.newsletter-section .form-control {
+  border-radius: 2rem;
+  border: 1.5px solid #b6dafe;
+  padding: 0.75rem 1.25rem;
+  font-size: 1.1rem;
+}
+.newsletter-section .btn {
+  border-radius: 2rem;
+  font-size: 1.1rem;
+  padding: 0.75rem 0;
+  font-weight: 600;
+  background: linear-gradient(90deg, #2191e8 0%, #073e6a 100%);
+  border: none;
+}
+.newsletter-section .btn:hover {
+  background: linear-gradient(90deg, #073e6a 0%, #2191e8 100%);
+}
+
+/* Fixed newsletter bar at the bottom */
+.newsletter-bar {
+  position: static;
+  width: 100vw;
+  background: linear-gradient(90deg, #eaf6ff 0%, #f7fbfd 100%);
+  box-shadow: 0 -2px 16px rgba(33,145,232,0.10);
+  padding: 1rem 2rem;
+  z-index: 1050;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.newsletter-bar-form {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  width: 100%;
+  max-width: 600px;
+  align-items: center;
+}
+.newsletter-bar-form input[type="email"] {
+  flex: 1 1 auto;
+  border-radius: 2rem;
+  border: 1.5px solid #b6dafe;
+  padding: 0.75rem 1.25rem;
+  font-size: 1.1rem;
+  background: #fff;
+  box-shadow: none;
+}
+.newsletter-bar-form button {
+  border-radius: 2rem;
+  font-size: 1.1rem;
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  background: linear-gradient(90deg, #2191e8 0%, #073e6a 100%);
+  border: none;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(33,145,232,0.08);
+  transition: background 0.2s;
+}
+.newsletter-bar-form button:hover {
+  background: linear-gradient(90deg, #073e6a 0%, #2191e8 100%);
+}
+@media (max-width: 900px) {
+  .container.my-5 > .row.justify-content-center { gap: 1.5rem; }
+  .col-12.col-md-4.mb-4.d-flex.align-items-stretch.flex-column.text-center {
+    width: 200px; max-width: 200px; min-width: 160px;
+  }
+  .info-card { min-width: 160px; max-width: 200px; }
+}
+@media (max-width: 600px) {
+  .container.my-5 > .row.justify-content-center { gap: 1rem; }
+  .col-12.col-md-4.mb-4.d-flex.align-items-stretch.flex-column.text-center {
+    width: 140px; max-width: 140px; min-width: 120px;
+  }
+  .info-card { min-width: 120px; max-width: 140px; }
+  .newsletter-bar { padding: 0.5rem; }
+  .newsletter-bar-form {
+    flex-direction: column;
+    gap: 0.5rem;
+    max-width: 100vw;
+  }
+  .newsletter-bar-form button {
+    width: 100%;
+    padding: 0.75rem 0;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 0 0 60px 0;
+  }
+  header {
+    padding: 24px 4px 12px 4px;
+  }
+  header img {
+    width: 100px;
+  }
+  header h1 {
+    font-size: 1.5em;
+    margin: 20px 0 6px 0;
+  }
+  section {
+    padding: 10px 2px;
+  }
+  section div {
+    padding: 10px;
+  }
+  .timeline-card {
+    width: 95vw;
+    min-width: 180px;
+    padding: 10px 6px;
+  }
+  .container.my-5,
+  .container.my-5.three-col-section {
+    padding: 0.5rem 0.1rem;
+    border-radius: 0.5rem;
+  }
+  .container.my-5 > .row.justify-content-center,
+  .container.my-5.three-col-section > .row.justify-content-center {
+    gap: 0.5rem;
+  }
+  .col-12.col-md-4.mb-4.d-flex.align-items-stretch.flex-column.text-center {
+    width: 100px;
+    max-width: 120px;
+    min-width: 80px;
+    padding: 0;
+  }
+  .info-card {
+    min-width: 80px;
+    max-width: 120px;
+    padding: 0 0.1rem;
+  }
+  .info-card h4 {
+    font-size: 1rem;
+    margin-bottom: 0.7rem;
+  }
+  .info-card p {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+  .info-card .btn {
+    min-width: 90px;
+    font-size: 0.95rem;
+    padding: 0.5rem 1rem;
+  }
+  .newsletter-bar {
+    padding: 0.5rem;
+  }
+  .newsletter-bar-form {
+    flex-direction: column;
+    gap: 0.5rem;
+    max-width: 100vw;
+  }
+  .newsletter-bar-form button {
+    width: 100%;
+    padding: 0.75rem 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  header {
+    padding: 60px 0 30px 0;
+  }
+  header h1 {
+    font-size: 3em;
+    margin: 50px 0 12px 0;
+  }
+  .timeline-card {
+    width: 400px;
+    min-width: 320px;
+    padding: 32px 24px;
+  }
+  .container.my-5.three-col-section {
+    padding: 4rem 0 3.5rem 0;
+    border-radius: 2rem;
+  }
+  .container.my-5.three-col-section > .row.justify-content-center {
+    gap: 6rem;
+  }
+  .info-card {
+    min-width: 300px;
+    max-width: 400px;
+    padding: 0 2rem;
+  }
+  .info-card h4 {
+    font-size: 1.7rem;
+    margin-bottom: 1.5rem;
+  }
+  .info-card p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  .info-card .btn {
+    min-width: 180px;
+    font-size: 1.15rem;
+    padding: 1rem 2.5rem;
+  }
+}
+
+/* Style the instruction at the bottom */
+body > p {
+  text-align: center;
+  color: #555;
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+
+footer.bg-dark {
+  background: linear-gradient(90deg, #073e6a 0%, #2191e8 100%) !important;
+  color: #fff !important;
+  border-top: none;
+  box-shadow: 0 -2px 24px rgba(33,145,232,0.10);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+footer a.text-white {
+  color: #aad8ff !important;
+  font-weight: 500;
+  margin-left: 1.5rem;
+  margin-right: 0;
+  transition: color 0.2s;
+}
+
+footer a.text-white:hover {
+  color: #fff !important;
+  text-decoration: underline;
+}
+
+footer .container {
+  max-width: 100vw;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+footer small {
+  font-size: 1.08rem;
+  letter-spacing: 0.5px;
+  opacity: 0.85;
+}
+
+/* Enhanced three-column section */
+.container.my-5.three-col-section {
+  background: linear-gradient(90deg, #eaf6ff 0%, #f7fbfd 100%);
+  border-radius: 1.5rem;
+  padding: 3.5rem 0 3rem 0;
+  margin-bottom: 3rem;
+  box-shadow: 0 4px 32px rgba(33,145,232,0.10);
+  width: 100vw;
+  max-width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.container.my-5.three-col-section > .row.justify-content-center {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 6rem;
+  justify-content: center;
+  align-items: stretch;
+  width: 100vw;
+  max-width: 100vw;
+  margin: 0;
+}
+
+.info-card h4 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 1.2rem;
+  color: #0071c5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 8px #eaf6ff;
+}
+
+.info-card i {
+  font-size: 3rem !important;
+  color: #2191e8;
+  filter: drop-shadow(0 2px 8px #b6dafe);
+  margin-bottom: 0.7rem;
+}
+
+.info-card p {
+  color: #222;
+  font-size: 1.13rem;
+  margin-bottom: 1.7rem;
+  text-align: center;
+  line-height: 1.7;
+}
+
+.info-card .btn {
+  min-width: 150px;
+  font-size: 1.08rem;
+  border-radius: 2rem;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(33,145,232,0.10);
+  background: linear-gradient(90deg, #2191e8 0%, #073e6a 100%);
+  color: #fff;
+  border: none;
+  padding: 0.7rem 2rem;
+  transition: background 0.2s;
+}
+
+.info-card .btn:hover {
+  background: linear-gradient(90deg, #073e6a 0%, #2191e8 100%);
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  .container.my-5.three-col-section > .row.justify-content-center { gap: 2rem; }
+  .info-card { min-width: 160px; max-width: 200px; padding: 0 0.5rem; }
+}
+
+@media (max-width: 600px) {
+  .container.my-5.three-col-section { padding: 1.2rem 0.2rem; }
+  .container.my-5.three-col-section > .row.justify-content-center { gap: 0.7rem; }
+  .info-card { min-width: 120px; max-width: 140px; padding: 0 0.1rem; }
+}
