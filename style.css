@@ -127,11 +127,18 @@ section {
   box-sizing: border-box;
   z-index: 2; /* Make sure it appears above the image */
   text-align: left; /* Align text to the left for readability */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease-in-out, visibility 0.25s ease-in-out;
 }
 
-/* Show the paragraph when hovering over the card */
-.timeline-card:hover p {
+/* Show the paragraph when hovering or focusing on the card */
+.timeline-card:hover p,
+.timeline-card:focus-within p {
   display: block;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 /* Add a simple hover effect to cards */
@@ -265,6 +272,294 @@ section p {
   }
   .timeline-card:last-child {
     margin-right: 32px;
+  }
+}
+
+@media (min-width: 1200px) {
+  header {
+    padding: 60px 0 30px 0;
+  }
+  header h1 {
+    font-size: 3em;
+    margin: 50px 0 12px 0;
+  }
+  .timeline-card {
+    width: 400px;
+    min-width: 320px;
+    padding: 32px 24px;
+  }
+  .container.my-5.three-col-section {
+    padding: 4rem 0 3.5rem 0;
+    border-radius: 2rem;
+  }
+  .container.my-5.three-col-section > .row.justify-content-center {
+    gap: 6rem;
+  }
+  .info-card {
+    min-width: 300px;
+    max-width: 400px;
+    padding: 0 2rem;
+  }
+  .info-card h4 {
+    font-size: 1.7rem;
+    margin-bottom: 1.5rem;
+  }
+  .info-card p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  .info-card .btn {
+    min-width: 180px;
+    font-size: 1.15rem;
+    padding: 1rem 2.5rem;
+  }
+}
+
+/* Make the three-column info cards display inline horizontally */
+.container.my-5 > .row.justify-content-center {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 2.5rem;
+}
+.col-12.col-md-4.mb-4.d-flex.align-items-stretch.flex-column.text-center {
+  flex: 0 0 auto;
+  width: 360px;
+  max-width: 360px;
+  min-width: 220px;
+  padding: 0;
+}
+.info-card {
+  background: #fff;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 8px rgba(33,145,232,0.06);
+  border: 1px solid #e3eaf3;
+  padding: 1rem 0.75rem;
+  margin-bottom: 1.25rem;
+  transition: box-shadow 0.18s, transform 0.18s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 200px;
+  max-width: 260px;
+  width: 100%;
+}
+.info-card:hover {
+  box-shadow: 0 4px 16px rgba(33,145,232,0.13);
+  transform: translateY(-2px) scale(1.01);
+}
+.info-card h4 {
+  font-size: 1.15rem;
+  margin-bottom: 0.75rem;
+  color: #0a3a5e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.info-card p {
+  color: #3a3a3a;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.info-card .btn {
+  min-width: 120px;
+  font-size: 1rem;
+  border-radius: 2rem;
+}
+
+/* Subscription card highlight */
+.info-card.p-4 {
+  background: #eaf6ff;
+  border: 1.5px solid #b6dafe;
+}
+
+.container.my-5 {
+  background: #f7fbfd;
+  border-radius: 1rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+/* Newsletter Subscription Section Modern Style */
+.newsletter-section {
+  background: #eaf6ff;
+  border-radius: 1.25rem;
+  box-shadow: 0 2px 8px rgba(33,145,232,0.08);
+  padding: 2.5rem 2rem 2rem 2rem;
+  margin-bottom: 2.5rem;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.newsletter-section h4 {
+  color: #073e6a;
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+.newsletter-section form {
+  width: 100%;
+}
+.newsletter-section .form-label {
+  color: #0a3a5e;
+  font-weight: 500;
+}
+.newsletter-section .form-control {
+  border-radius: 2rem;
+  border: 1.5px solid #b6dafe;
+  padding: 0.75rem 1.25rem;
+  font-size: 1.1rem;
+}
+.newsletter-section .btn {
+  border-radius: 2rem;
+  font-size: 1.1rem;
+  padding: 0.75rem 0;
+  font-weight: 600;
+  background: linear-gradient(90deg, #2191e8 0%, #073e6a 100%);
+  border: none;
+}
+.newsletter-section .btn:hover {
+  background: linear-gradient(90deg, #073e6a 0%, #2191e8 100%);
+}
+
+/* Fixed newsletter bar at the bottom */
+.newsletter-bar {
+  position: static;
+  width: 100vw;
+  background: linear-gradient(90deg, #eaf6ff 0%, #f7fbfd 100%);
+  box-shadow: 0 -2px 16px rgba(33,145,232,0.10);
+  padding: 1rem 2rem;
+  z-index: 1050;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.newsletter-bar-form {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  width: 100%;
+  max-width: 600px;
+  align-items: center;
+}
+.newsletter-bar-form input[type="email"] {
+  flex: 1 1 auto;
+  border-radius: 2rem;
+  border: 1.5px solid #b6dafe;
+  padding: 0.75rem 1.25rem;
+  font-size: 1.1rem;
+  background: #fff;
+  box-shadow: none;
+}
+.newsletter-bar-form button {
+  border-radius: 2rem;
+  font-size: 1.1rem;
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  background: linear-gradient(90deg, #2191e8 0%, #073e6a 100%);
+  border: none;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(33,145,232,0.08);
+  transition: background 0.2s;
+}
+.newsletter-bar-form button:hover {
+  background: linear-gradient(90deg, #073e6a 0%, #2191e8 100%);
+}
+@media (max-width: 900px) {
+  .container.my-5 > .row.justify-content-center { gap: 1.5rem; }
+  .col-12.col-md-4.mb-4.d-flex.align-items-stretch.flex-column.text-center {
+    width: 200px; max-width: 200px; min-width: 160px;
+  }
+  .info-card { min-width: 160px; max-width: 200px; }
+}
+@media (max-width: 600px) {
+  .container.my-5 > .row.justify-content-center { gap: 1rem; }
+  .col-12.col-md-4.mb-4.d-flex.align-items-stretch.flex-column.text-center {
+    width: 140px; max-width: 140px; min-width: 120px;
+  }
+  .info-card { min-width: 120px; max-width: 140px; }
+  .newsletter-bar { padding: 0.5rem; }
+  .newsletter-bar-form {
+    flex-direction: column;
+    gap: 0.5rem;
+    max-width: 100vw;
+  }
+  .newsletter-bar-form button {
+    width: 100%;
+    padding: 0.75rem 0;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 0 0 60px 0;
+  }
+  header {
+    padding: 24px 4px 12px 4px;
+  }
+  header img {
+    width: 100px;
+  }
+  header h1 {
+    font-size: 1.5em;
+    margin: 20px 0 6px 0;
+  }
+  section {
+    padding: 10px 2px;
+  }
+  section div {
+    padding: 10px;
+  }
+  .timeline-card {
+    width: 95vw;
+    min-width: 180px;
+    padding: 10px 6px;
+  }
+  .container.my-5,
+  .container.my-5.three-col-section {
+    padding: 0.5rem 0.1rem;
+    border-radius: 0.5rem;
+  }
+  .container.my-5 > .row.justify-content-center,
+  .container.my-5.three-col-section > .row.justify-content-center {
+    gap: 0.5rem;
+  }
+  .col-12.col-md-4.mb-4.d-flex.align-items-stretch.flex-column.text-center {
+    width: 100px;
+    max-width: 120px;
+    min-width: 80px;
+    padding: 0;
+  }
+  .info-card {
+    min-width: 80px;
+    max-width: 120px;
+    padding: 0 0.1rem;
+  }
+  .info-card h4 {
+    font-size: 1rem;
+    margin-bottom: 0.7rem;
+  }
+  .info-card p {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+  .info-card .btn {
+    min-width: 90px;
+    font-size: 0.95rem;
+    padding: 0.5rem 1rem;
+  }
+  .newsletter-bar {
+    padding: 0.5rem;
+  }
+  .newsletter-bar-form {
+    flex-direction: column;
+    gap: 0.5rem;
+    max-width: 100vw;
+  }
+  .newsletter-bar-form button {
+    width: 100%;
+    padding: 0.75rem 0;
   }
 }
 
