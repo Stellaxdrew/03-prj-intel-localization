@@ -138,21 +138,21 @@
 
   <section class="container my-5">
     <div class="row justify-content-center">
-      <div class="col-12 col-md-4 mb-4 d-flex align-items-stretch flex-column text-center">
+      <div class="col-1 col-md-4 mb-4 d-flex align-items-stretch flex-column text-center">
         <div class="info-card h-100 d-flex flex-column p-4">
           <h4><i class="bi bi-globe2 text-primary me-2" style="font-size:2rem;"></i>Global Impact</h4>
           <p class="flex-grow-1">Intel's sustainability initiatives reach across the globe, driving positive change in every region where we operate.</p>
           <a href="#" class="btn btn-outline-primary btn-lg fw-bold shadow rounded-pill mt-3" data-bs-toggle="modal" data-bs-target="#learnMoreModal">Learn More</a>
         </div>
       </div>
-      <div class="col-12 col-md-4 mb-4 d-flex align-items-stretch flex-column text-center">
+      <div class="col-1 col-md-4 mb-4 d-flex align-items-stretch flex-column text-center">
         <div class="info-card h-100 d-flex flex-column p-4">
           <h4><i class="bi bi-lightning-charge-fill text-success me-2" style="font-size:2rem;"></i>Clean Energy</h4>
           <p class="flex-grow-1">We invest in renewable energy and innovative technologies to reduce our carbon footprint and promote clean manufacturing.</p>
           <a href="#" class="btn btn-outline-success btn-lg fw-bold shadow rounded-pill mt-3">Learn More</a>
         </div>
       </div>
-      <div class="col-12 col-md-4 mb-4 d-flex align-items-stretch flex-column text-center">
+      <div class="col-1 col-md-4 mb-4 d-flex align-items-stretch flex-column text-center">
         <div class="info-card h-100 d-flex flex-column p-4">
           <h4><i class="bi bi-people-fill text-info me-2" style="font-size:2rem;"></i>Collaboration</h4>
           <p class="flex-grow-1">Partnering with industry leaders and communities, Intel fosters collaboration for a more sustainable future.</p>
@@ -202,33 +202,14 @@
     } else {
       html.setAttribute('dir', 'ltr');
     }
-  }
-
-  // Observe changes to the lang attribute
-  const observer = new MutationObserver(updateDirByLang);
-  observer.observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
-
-  // Initial check
-  updateDirByLang();
-  </script>
-</body>
-</html>
-    const html = document.documentElement;
-    const lang = html.getAttribute('lang') || '';
-    if (rtlLangs.some(code => lang.startsWith(code))) {
-      html.setAttribute('dir', 'rtl');
-    } else {
-      html.setAttribute('dir', 'ltr');
     }
-    }
-
+ 
     // Observe changes to the lang attribute
     const observer = new MutationObserver(updateDirByLang);
     observer.observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
 
     // Initial check
     updateDirByLang();
-    </script>
-    </body>
-    
+  </script>
+</body>
 </html>
